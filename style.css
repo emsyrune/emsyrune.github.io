@@ -55,6 +55,7 @@ a { color: var(--accent); }
   box-shadow: 4px 4px 0 var(--ink);
   padding: 16px;
 }
+.app + .app { margin-top: 16px; }
 .app img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
 .app h3 { margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 1.4rem; }
 .app p { margin: 2px 0 6px; }
