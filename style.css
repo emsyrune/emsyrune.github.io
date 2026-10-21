@@ -1,0 +1,68 @@
+/* Emsy Rune site: same palette and type as the games (cream / night blue, DM Serif Display + Rubik). */
+@font-face { font-family: 'DM Serif Display'; src: url('/fonts/dm-serif-display-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Rubik'; src: url('/fonts/rubik-latin-400-normal.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Rubik'; src: url('/fonts/rubik-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+
+:root {
+  --bg: #f3ede0;
+  --panel: #ffffff;
+  --ink: #1c1a17;
+  --muted: #6c655a;
+  --accent: #b22234;
+  --rule: #e2d9c6;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151c2e;
+    --panel: #1f2840;
+    --ink: #eef0f6;
+    --muted: #aab3c8;
+    --accent: #ef5a68;
+    --rule: #2f3a57;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.6 Rubik, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+h1, h2, .brand { font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(2rem, 7vw, 2.8rem); margin: 0 0 8px; }
+h2 { font-size: 1.5rem; margin: 40px 0 8px; }
+h3 { font-size: 1.05rem; font-weight: 600; margin: 24px 0 4px; }
+p, li { margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+a { color: var(--accent); }
+.muted { color: var(--muted); }
+.lang { text-align: right; font-size: 0.95rem; margin-bottom: 24px; }
+
+.brand { font-size: clamp(2.4rem, 10vw, 3.6rem); margin: 0; }
+.tagline { color: var(--muted); margin: 4px 0 40px; }
+
+.app {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 16px;
+}
+.app img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+.app h3 { margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 1.4rem; }
+.app p { margin: 2px 0 6px; }
+.app .links { font-size: 0.95rem; }
+
+table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--rule); }
+th { font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+
+footer { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; color: var(--muted); font-size: 0.9rem; }
